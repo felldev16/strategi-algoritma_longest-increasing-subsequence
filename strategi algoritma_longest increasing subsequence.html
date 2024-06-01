@@ -1,0 +1,434 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.11.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+    <div class="h-screen grid grid-rows-12 gap-6 p-4">
+        <div class="bg-neutral text-primary-content grid grid-cols-3 justify-between card navbar">
+
+            <button class="btn btn-primary w-fit" onclick="my_modal_1.showModal()">
+                Authors
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1L7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002-.014.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a6 6 0 0 0-1.23-.247A7 7 0 0 0 5 9c-4 0-5 3-5 4q0 1 1 1h4.216A2.24 2.24 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.5 5.5 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4" />
+                </svg>
+            </button>
+            <dialog id="my_modal_1" class="modal text-neutral-content">
+                <div class="modal-box bg-neutral">
+                    <h3 class="font-bold text-lg">This app is created by</h3>
+                    <div class="pt-4">
+                        <table class="table text-neutral-content">
+                            <!-- head -->
+                            <thead class="text-neutral-content">
+                                <tr>
+                                    <th></th>
+                                    <th>Name</th>
+                                    <th>NIM</th>
+                                </tr>
+                            </thead>
+                            <tbody class="overflow-auto">
+                                <!-- row 1 -->
+                                <tr>
+                                    <th>1</th>
+                                    <td>Alif Wide Ardiansyah</td>
+                                    <td>1301223491</td>
+                                </tr>
+                                <!-- row 2 -->
+                                <tr>
+                                    <th>2</th>
+                                    <td>Muhammad Rifqy Khuzaini</td>
+                                    <td>115012934</td>
+                                </tr>
+                                <!-- row 3 -->
+                                <tr>
+                                    <th>3</th>
+                                    <td>Fellicia Devina Baan Logen</td>
+                                    <td>3242342334</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="modal-action">
+                        <form method="dialog">
+                            <!-- if there is a button in form, it will close the modal -->
+                            <button class="btn">Close</button>
+                        </form>
+                    </div>
+                </div>
+            </dialog>
+            <div class="h-full w-full flex justify-center">
+                <button class="btn btn-neutral">LIS (Longest Increasing Subsequence) Solver</button>
+            </div>
+            <div class="join join-horizontal flex justify-end">
+                <input type="radio" name="theme-buttons" class="btn theme-controller join-item" aria-label="Default"
+                    value="default" />
+                <input type="radio" name="theme-buttons" class="btn theme-controller join-item" aria-label="Retro"
+                    value="retro" />
+                <input type="radio" name="theme-buttons" class="btn theme-controller join-item" aria-label="Cyberpunk"
+                    value="cyberpunk" />
+                <input type="radio" name="theme-buttons" class="btn theme-controller join-item" aria-label="Halloween"
+                    value="halloween" />
+                <input type="radio" name="theme-buttons" class="btn theme-controller join-item" aria-label="Synthwave"
+                    value="synthwave" />
+            </div>
+        </div>
+        <div class="flex w-full h-full row-span-11">
+            <div class="flex h-full w-1/3 card bg-neutral rounded-box text-4xl p-2 gap-4">
+                <button class="btn btn-neutral text-xl">Performance</button>
+                <div class="stats shadow">
+                    <div class="stat">
+                        <div class="stat-figure text-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                class="inline-block w-8 h-8 stroke-current" viewBox="0 0 20 20">
+                                <path d="M8 8c.828 0 1.5-.895 1.5-2S8.828 4 8 4s-1.5.895-1.5 2S7.172 8 8 8" />
+                                <path
+                                    d="M11.953 8.81c-.195-3.388-.968-5.507-1.777-6.819C9.707 1.233 9.23.751 8.857.454a3.5 3.5 0 0 0-.463-.315A2 2 0 0 0 8.25.064.55.55 0 0 0 8 0a.55.55 0 0 0-.266.073 2 2 0 0 0-.142.08 4 4 0 0 0-.459.33c-.37.308-.844.803-1.31 1.57-.805 1.322-1.577 3.433-1.774 6.756l-1.497 1.826-.004.005A2.5 2.5 0 0 0 2 12.202V15.5a.5.5 0 0 0 .9.3l1.125-1.5c.166-.222.42-.4.752-.57.214-.108.414-.192.625-.281l.198-.084c.7.428 1.55.635 2.4.635s1.7-.207 2.4-.635q.1.044.196.083c.213.09.413.174.627.282.332.17.586.348.752.57l1.125 1.5a.5.5 0 0 0 .9-.3v-3.298a2.5 2.5 0 0 0-.548-1.562zM12 10.445v.055c0 .866-.284 1.585-.75 2.14.146.064.292.13.425.199.39.197.8.46 1.1.86L13 14v-1.798a1.5 1.5 0 0 0-.327-.935zM4.75 12.64C4.284 12.085 4 11.366 4 10.5v-.054l-.673.82a1.5 1.5 0 0 0-.327.936V14l.225-.3c.3-.4.71-.664 1.1-.861.133-.068.279-.135.425-.199M8.009 1.073q.096.06.226.163c.284.226.683.621 1.09 1.28C10.137 3.836 11 6.237 11 10.5c0 .858-.374 1.48-.943 1.893C9.517 12.786 8.781 13 8 13s-1.517-.214-2.057-.607C5.373 11.979 5 11.358 5 10.5c0-4.182.86-6.586 1.677-7.928.409-.67.81-1.082 1.096-1.32q.136-.113.236-.18Z" />
+                                <path
+                                    d="M9.479 14.361c-.48.093-.98.139-1.479.139s-.999-.046-1.479-.139L7.6 15.8a.5.5 0 0 0 .8 0z" />
+                            </svg>
+                        </div>
+                        <div class="stat-title">Time Taken</div>
+                        <div class="stat-value" id="time-taken">0 ms</div>
+                        <div class="stat-desc">Time taken to generate LIS of the input ️ </div>
+                    </div>
+                </div>
+                <div class="stats shadow">
+                    <div class="stat">
+                        <div class="stat-figure text-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                class="inline-block w-8 h-8 stroke-current">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="stat-title">Memory Usage</div>
+                        <div class="stat-value" id="memory-usage">0 Bytes</div>
+                        <div class="stat-desc">Memory usage estimation based on dp array size</div>
+                    </div>
+                </div>
+                <div class="stats shadow">
+                    <div class="stat">
+                        <div class="stat-figure text-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                class="inline-block w-8 h-8 stroke-current">
+                                <path
+                                    d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022zm2.004.45a7 7 0 0 0-.985-.299l.219-.976q.576.129 1.126.342zm1.37.71a7 7 0 0 0-.439-.27l.493-.87a8 8 0 0 1 .979.654l-.615.789a7 7 0 0 0-.418-.302zm1.834 1.79a7 7 0 0 0-.653-.796l.724-.69q.406.429.747.91zm.744 1.352a7 7 0 0 0-.214-.468l.893-.45a8 8 0 0 1 .45 1.088l-.95.313a7 7 0 0 0-.179-.483m.53 2.507a7 7 0 0 0-.1-1.025l.985-.17q.1.58.116 1.17zm-.131 1.538q.05-.254.081-.51l.993.123a8 8 0 0 1-.23 1.155l-.964-.267q.069-.247.12-.501m-.952 2.379q.276-.436.486-.908l.914.405q-.24.54-.555 1.038zm-.964 1.205q.183-.183.35-.378l.758.653a8 8 0 0 1-.401.432z" />
+                                <path d="M8 1a7 7 0 1 0 4.95 11.95l.707.707A8.001 8.001 0 1 1 8 0z" />
+                                <path
+                                    d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5" />
+
+                            </svg>
+                        </div>
+                        <div class="stat-title">Performance History</div>
+                        <div class="max-h-80 overflow-scroll my-2 stat-value">
+                            <table class="table">
+                                <!-- head -->
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>Algorithm</th>
+                                        <th>Time Taken</th>
+                                        <th>Memory Usage</th>
+                                        <th>Array Size</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="t-history"></tbody>
+                            </table>
+                        </div>
+                        <div class="stat-desc">Performance Monitoring History</div>
+                    </div>
+                </div>
+            </div>
+            <div class="divider divider-horizontal"></div>
+            <div class="flex h-full w-1/3 card bg-neutral rounded-box text-4xl p-2">
+                <button class="btn btn-neutral text-xl">Input</button>
+                <label class="form-control">
+                    <div class="label">
+                        <span class="label-text text-neutral-content">Input Integer Array Data</span>
+                        <span class="label-text-alt text-neutral-content">Separated by comma</span>
+                    </div>
+                    <textarea id="main-input" class="textarea textarea-bordered h-52"
+                        placeholder="e.g 1,4,23,2,42,63"></textarea>
+                </label>
+                <div
+                    class="stat rounded-box m-0 p-2 mt-10 grid grid-cols-2 grid-col place-content-between gap-2 gap-y-8">
+                    <div class="border border-base-100 rounded-box p-3">
+                        <div class="stat-title text-neutral-content">Elements.</div>
+                        <div class="stat-value text-neutral-content h-12" id="element-count"></div>
+                        <div class="stat-desc text-neutral-content" id="label-element-count"></div>
+                    </div>
+                    <div class="border border-base-100 rounded-box p-3">
+                        <div class="stat-title text-neutral-content">Algorihtm.</div>
+                        <label class="swap h-10" id="algo-change">
+                            <input type="checkbox" id="algorithm-selected" />
+                            <!-- <div class="stat-title">Algorithm</div> -->
+                            <div class="swap-off fill-current text-neutral-content">
+                                DP
+                            </div>
+                            <div class="swap-on fill-current text-neutral-content">
+                                Brute Force
+                            </div>
+                        </label>
+                        <div class="stat-desc text-neutral-content">Algorithm selected</div>
+                    </div>
+                    <div class="border border-base-100 rounded-box p-3">
+                        <div class="stat-title text-neutral-content">Time Comp.</div>
+                        <p class="text-neutral-content h-12" id="tc-dp">\(O(n log n)\)</p>
+                        <p class="text-neutral-content h-12" style="display: none;" id="tc-bf">\(O(2^n)\)</p>
+                        <div class="stat-desc text-neutral-content">Time Complexity</div>
+                    </div>
+                    <div class="border border-base-100 rounded-box p-3">
+                        <div class="stat-title text-neutral-content">Iter Est.</div>
+                        <p class="text-neutral-content h-12" id="it-est">0</p>
+                        <div class="stat-desc text-neutral-content">Total Iteration Estimation</div>
+                    </div>
+                </div>
+                <button class="btn btn-primary mt-20" id="compute">Compute LIS</button>
+            </div>
+            <div class="divider divider-horizontal"></div>
+            <div class="flex h-full max-h-full w-1/3 card bg-neutral rounded-box text-4xl p-2">
+                <button class="btn btn-neutral text-xl">Output</button>
+
+                <div class="border border-base-100 rounded-box p-2">
+                    <div class="stat-desc text-neutral-content ">Input Values</div>
+                    <div class="flex flex-wrap mt-2 overflow-auto max-h-80 bg-base-100 rounded-box "
+                        id="ellist">
+                    </div>
+                </div>
+
+                <div class="border border-base-100 rounded-box p-3 mt-4">
+                    <div class="stat-desc text-neutral-content">Longest Increasing
+                        Subsequence</div>
+                    <div class="flex flex-wrap justify-center mt-2 overflow-auto h-70 max-h-80 bg-base-100 rounded-box items-start"
+                        id="ollist">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer footer-center p-4 bg-base-300 text-base-content">
+            <aside>
+                <p>Copyright © 2024 - Final project for Algorithmic Strategy</p>
+            </aside>
+        </footer>
+    </div>
+</body>
+<script>
+    const inputTextArea = document.getElementById("main-input");
+    const elCount = document.getElementById("element-count");
+    const labelElcount = document.getElementById("label-element-count");
+    const elList = document.getElementById("ellist");
+    const olList = document.getElementById("ollist");
+    const algo = document.getElementById("algorithm-selected");
+    const computeButton = document.getElementById("compute");
+    const algorithms = ['DP', 'BF']
+    let n = 0;
+
+    let v = 0;
+    let curalgo = 'DP'
+    let arr = []
+    let i = 1;
+
+    function intToString(value) {
+        var suffixes = ["", "k", "m", "b", "t", "q", "qi"];
+        var suffixNum = Math.floor(("" + value).length / 3);
+        var shortValue = parseFloat((suffixNum != 0 ? (value / Math.pow(1000, suffixNum)) : value).toPrecision(2));
+        if (shortValue % 1 != 0) {
+            shortValue = shortValue.toFixed(1);
+        }
+        return shortValue + suffixes[suffixNum];
+    }
+
+    computeButton.addEventListener('click', () => {
+        const startTime = new Date().getTime();
+
+        let lis = [];
+
+        if (curalgo == "DP") lis = findLongestIncreasingSubsequence(arr)
+        else lis = longestIncreasingSubsequenceBruteForce(arr);
+
+        const endTime = new Date().getTime();
+        const timetaken = `${endTime - startTime} ms`;
+        const memoryusage = `${arr.length * 4} Bytes`;
+        document.getElementById("time-taken").innerHTML = timetaken;
+        document.getElementById("memory-usage").innerHTML = memoryusage;
+
+        olList.innerHTML = ''
+        for (el of lis) {
+            const newBadge = document.createElement('div');
+            // Add class names to the new div
+            newBadge.className = 'badge badge-lg bg-primary text-primary-content';
+            // Set the inner content of the new div
+            newBadge.textContent = el;
+            olList.appendChild(newBadge);
+        }
+        const newRow = document.createElement('tr');
+        const nnum = document.createElement('td');
+        nnum.textContent = i;
+        const na = document.createElement('td');
+        na.textContent = curalgo;
+        const nt = document.createElement('td');
+        nt.textContent = timetaken;
+        const nm = document.createElement('td');
+        nm.textContent = memoryusage;
+        const nar = document.createElement('td');
+        nar.textContent = arr.length;
+        newRow.appendChild(nnum);
+        newRow.appendChild(na);
+        newRow.appendChild(nt);
+        newRow.appendChild(nm);
+        newRow.appendChild(nar);
+
+        document.getElementById("t-history").appendChild(newRow);
+        i++;
+    });
+
+    algo.addEventListener('change', (event) => {
+        v++;
+        curalgo = algorithms[v % 2];
+        console.log({ curalgo })
+        if (curalgo == 'DP') {
+            document.getElementById("tc-bf").style.display = "none"
+            document.getElementById("tc-dp").style.display = "flex"
+            document.getElementById("it-est").innerHTML = intToString(n * Math.round(Math.log2(n)))
+        } else {
+            document.getElementById("tc-bf").style.display = "flex"
+            document.getElementById("tc-dp").style.display = "none"
+            document.getElementById("it-est").innerHTML = intToString(Math.pow(2, n))
+        }
+    })
+
+    elCount.innerHTML = 0;
+    labelElcount.innerHTML = "Element Count";
+    inputTextArea.addEventListener("input", (event) => {
+        console.log(event.target.value)
+        const inarr = event.target.value.split(",")
+        const res = validateInput(inarr)
+        if (res.ok) {
+            labelElcount.innerHTML = "Element Count"
+        } else {
+            labelElcount.innerHTML = "Please Only use integers"
+        }
+        elCount.innerHTML = res.parsedList.length * res.ok
+        elList.innerHTML = ''
+        const parsedList = res.parsedList
+        for (el of res.parsedList) {
+            const newBadge = document.createElement('div');
+            // Add class names to the new div
+            newBadge.className = 'badge badge-lg';
+            // Set the inner content of the new div
+            newBadge.textContent = el;
+            elList.appendChild(newBadge);
+        }
+        n = parsedList.length
+        arr = parsedList
+        if (curalgo == 'DP') {
+            document.getElementById("it-est").innerHTML = intToString(n * Math.round(Math.log2(n)))
+        } else {
+            document.getElementById("it-est").innerHTML = intToString(Math.pow(2, n))
+        }
+    });
+
+    function findLongestIncreasingSubsequence(nums) {
+        if (nums.length === 0) return [];
+
+        // `dp` array to store the indices of the smallest end elements of the subsequence of each length
+        const dp = [];
+        // `prev` array to reconstruct the LIS
+        const prev = Array(nums.length).fill(-1);
+        let length = 0; // Length of the longest increasing subsequence
+
+        for (let i = 0; i < nums.length; i++) {
+            // Binary search to find the insertion point
+            let low = 0, high = length;
+            while (low < high) {
+                const mid = Math.floor((low + high) / 2);
+                if (nums[dp[mid]] < nums[i]) {
+                    low = mid + 1;
+                } else {
+                    high = mid;
+                }
+            }
+
+            // Update `dp` and `prev`
+            if (low >= length) {
+                dp[length++] = i;
+            } else {
+                dp[low] = i;
+            }
+
+            if (low > 0) {
+                prev[i] = dp[low - 1];
+            }
+        }
+
+        // Reconstruct the LIS
+        const lis = Array(length);
+        let k = dp[length - 1];
+        for (let i = length - 1; i >= 0; i--) {
+            lis[i] = nums[k];
+            k = prev[k];
+        }
+
+        return lis;
+    }
+
+    function isIncreasing(subseq) {
+        for (let i = 0; i < subseq.length - 1; i++) {
+            if (subseq[i] >= subseq[i + 1]) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    function longestIncreasingSubsequenceBruteForce(sequence) {
+        let maxLength = 0;
+        let longestSubseq = [];
+
+        function generateSubsequences(index, currentSubseq) {
+            if (index === sequence.length) {
+                if (isIncreasing(currentSubseq) && currentSubseq.length > maxLength) {
+                    maxLength = currentSubseq.length;
+                    longestSubseq = currentSubseq.slice();
+                }
+                return;
+            }
+
+            // Include the current element
+            generateSubsequences(index + 1, currentSubseq.concat(sequence[index]));
+
+            // Exclude the current element
+            generateSubsequences(index + 1, currentSubseq);
+        }
+
+        generateSubsequences(0, []);
+        return longestSubseq;
+    }
+
+
+    function validateInput(inarr) {
+        let parsedList = []
+        let ok = true;
+        for (const el of inarr) {
+            if (el.length > 0 && !isNaN(parseInt(el))) parsedList.push(parseInt(el));
+            else {
+                if (el.length > 0) ok = false;
+            }
+        };
+        if (!ok) parsedList = []
+        return { ok, parsedList };
+    };
+</script>
+
+</html>
