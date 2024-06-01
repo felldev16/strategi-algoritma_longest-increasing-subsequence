@@ -1,0 +1,1 @@
+Longest Increasing Subsequence (LIS) adalah masalah klasik dalam ilmu komputer yang melibatkan pencarian subsekuens terpanjang dalam sebuah deret angka di mana setiap angka dalam subsekuens tersebut diurutkan secara menaik
